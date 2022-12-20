@@ -96,23 +96,24 @@ class HomePage extends StatelessWidget {
                                borderRadius: BorderRadius.circular(10)
                              ),
                            ),
-                           // tab3
-                           Container(width: 80,
-                             child: Tab(
-                               child: Text('Status'
-                               ),
-                             ),),
-                           Container(width: 80,
-                             child: Tab(
-                               child: Text('Call'
-                               ),
-                             ),
-                           ),
+
 
                          ],
                        ),
                      ),
-                   )
+                   ),
+                   // tab3
+                   Container(width: 80,
+                     child: Tab(
+                       child: Text('Status'
+                       ),
+                     ),),
+                   Container(width: 80,
+                     child: Tab(
+                       child: Text('Call'
+                       ),
+                     ),
+                   ),
                  ],
 
                ) ,
