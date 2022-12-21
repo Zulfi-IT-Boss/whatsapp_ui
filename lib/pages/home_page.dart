@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/widgets/calls_widget.dart';
+import 'package:whatsapp_ui/widgets/chats_widget.dart';
+import 'package:whatsapp_ui/widgets/status_widget.dart';
 
 class HomePage extends StatelessWidget {
 
@@ -63,17 +66,19 @@ class HomePage extends StatelessWidget {
           ),
       ),
          body:Column(
+           mainAxisAlignment: MainAxisAlignment.start,
+           crossAxisAlignment: CrossAxisAlignment.start,
            children: [
              Container(
                color: Color(0xff075e55),
                child:TabBar(
 
-                 padding: EdgeInsets.all(22),
+
                  tabs: [
                    //tab1
                    Container(
                      child:Tab(
-                       icon: Icon(Icons.camera_alt),
+                       icon: Icon(Icons.camera_alt,size: 25,),
                      ) ,
                    ),
                    // tab2
@@ -83,14 +88,14 @@ class HomePage extends StatelessWidget {
                        child: Row(
                          children: [
                            Text('Chats'),
+                           SizedBox(width: 5,),
                            Container(
-                             width: 20,
-                             height: 20,
-                             child: Center(
-                               child: Text('10',style: TextStyle(color: Color(0xff075e55),
-                                 fontSize: 14
-                               ),),
-                             ),
+                             alignment: Alignment.center,
+                             width: 22,
+                             height: 22,
+                             child: Text('10',style: TextStyle(color: Color(0xff075e55),
+                               fontSize: 12
+                             ),),
                              decoration: BoxDecoration(
                                color: Colors.white,
                                borderRadius: BorderRadius.circular(10)
@@ -108,6 +113,7 @@ class HomePage extends StatelessWidget {
                        child: Text('Status'
                        ),
                      ),),
+                   //tab 4
                    Container(width: 80,
                      child: Tab(
                        child: Text('Call'
@@ -115,9 +121,27 @@ class HomePage extends StatelessWidget {
                      ),
                    ),
                  ],
-
                ) ,
-             )
+             ),
+             Flexible(
+                 child: TabBarView(
+               children: [
+                 // tab1 Camera
+                 Container(color: Colors.black,
+                 ),
+                 // tab2
+                 Container(
+                   child: ChatsWidget(),
+                 ),
+                 // tab3
+                 Container(
+                   child:StatusWidget(),
+                 ),
+                 // tab4
+                 Container(
+                  child: CallsWidget(),
+                 )
+             ],))
            ],
          ),
          ),
