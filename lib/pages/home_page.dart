@@ -148,6 +148,11 @@ class HomePage extends StatelessWidget {
              ],))
            ],
          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: (){},
+            backgroundColor:Color(0xff00887a),
+            child: Icon(Icons.message),
+          ),
          ),
     );
 

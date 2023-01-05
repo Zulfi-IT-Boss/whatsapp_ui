@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/chat_bottom_bar.dart';
 import '../widgets/chat_sample.dart';
 
 class ChatPage extends StatelessWidget {
@@ -99,6 +100,7 @@ class ChatPage extends StatelessWidget {
           ),
         ),
       ),
+      bottomSheet: ChatBottomBar(),
     );
 
 
