@@ -76,38 +76,44 @@ class HomePage extends StatelessWidget {
              Container(
                color: const Color(0xff075e55),
                child:TabBar(
-
-
                  tabs: [
                    //tab1
-                   Container(
-                     child:const Tab(
-                       icon: Icon(Icons.camera_alt,size: 25,),
-                     ) ,
+                   Expanded(
+                     child: Container(
+                       child:const Tab(
+                         icon: Icon(Icons.camera_alt,size: 25,),
+                       ) ,
+                     ),
                    ),
                    // tab2
-                   Container(
-                     width: 80,
-                     child: Tab(
-                       child: Row(
-                         children: [
-                           const Text('Chats'),
-                           const SizedBox(width: 5,),
-                           Container(
-                             alignment: Alignment.center,
-                             width: 22,
-                             height: 22,
-                             child: const Text('10',style: TextStyle(color: Color(0xff075e55),
-                               fontSize: 12
-                             ),),
-                             decoration: BoxDecoration(
-                               color: Colors.white,
-                               borderRadius: BorderRadius.circular(10)
+                   Expanded(
+                     child: Container(
+                       
+                       width: 80,
+                       child: Tab(
+                         child: Row(
+                           children: [
+                             const Text('Chats'),
+                             const SizedBox(width: 5,),
+                             Expanded(
+                               child: Container(
+                                 
+                                 alignment: Alignment.center,
+                                 width: 22,
+                                 height: 22,
+                                 child: const Text('10',style: TextStyle(color: Color(0xff075e55),
+                                   fontSize: 12
+                                 ),),
+                                 decoration: BoxDecoration(
+                                   color: Colors.white,
+                                   borderRadius: BorderRadius.circular(10)
+                                 ),
+                               ),
                              ),
-                           ),
 
 
-                         ],
+                           ],
+                         ),
                        ),
                      ),
                    ),
@@ -148,10 +154,13 @@ class HomePage extends StatelessWidget {
              ],))
            ],
          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: (){},
-            backgroundColor:Color(0xff00887a),
-            child: Icon(Icons.message),
+          floatingActionButton: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: FloatingActionButton(
+              onPressed: (){},
+              backgroundColor:Color(0xff00887a),
+              child: Icon(Icons.message),
+            ),
           ),
          ),
     );

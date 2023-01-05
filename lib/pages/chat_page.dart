@@ -28,13 +28,13 @@ class ChatPage extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(45),
                     child: Image.asset('assets/images/1.jpg',width: 60,height: 60,)),
-                Padding(padding: EdgeInsets.only(left: 10),
+                Padding(padding: const EdgeInsets.only(left: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text("Programmer",
                     style: TextStyle(fontSize: 19),),
-                    SizedBox(height: 5,),
+                    const SizedBox(height: 5,),
                     Text("online",
                       style: TextStyle(fontSize: 15,
                           color: Colors.white.withOpacity(.8)
@@ -48,13 +48,13 @@ class ChatPage extends StatelessWidget {
           ),
           leadingWidth: 30 ,
           actions: const [
-            Padding(padding: EdgeInsets.only(top: 10,right: 25),
+            Padding(padding: EdgeInsets.only(top: 10,right: 11),
             child: Icon(CupertinoIcons.video_camera_solid,size: 25,),
             ),
-            Padding(padding: EdgeInsets.only(top: 10,right: 35),
+            Padding(padding: EdgeInsets.only(top: 10,right: 11),
               child: Icon(Icons.call),
             ),
-            Padding(padding: EdgeInsets.only(top: 10,right: 28),
+            Padding(padding: EdgeInsets.only(top: 10,right: 6),
               child: Icon(Icons.more_vert),
             ),
           ],
@@ -63,7 +63,7 @@ class ChatPage extends StatelessWidget {
       body: Container(
       height: double.infinity,
         width: double.infinity,
-        decoration:  BoxDecoration(
+        decoration:  const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bg.png'),
             fit: BoxFit.cover
@@ -71,15 +71,15 @@ class ChatPage extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(top: 10,left:8,right:8,bottom: 80 ),
+            padding: const EdgeInsets.only(top: 10,left:8,right:8,bottom: 80 ),
             child: Column(
               children: [
                 Container(
                   width: 300,
-                  margin: EdgeInsets.only(bottom: 20),
-                  padding: EdgeInsets.all(8),
+                  margin: const EdgeInsets.only(bottom: 20),
+                  padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Color(0xfffff3c2),
+                    color: const Color(0xfffff3c2),
                     borderRadius: BorderRadius.circular(5),
                     boxShadow:[
                       BoxShadow(
@@ -88,19 +88,19 @@ class ChatPage extends StatelessWidget {
                       )
                     ]
                   ),
-                  child: Text('Messages and calls are end-to-end encrypted,No one outside of this chat can read and listen.Tap to more...'),
+                  child: const Text('Messages and calls are end-to-end encrypted,No one outside of this chat can read and listen.Tap to more...'),
                 ),
-                ChatSample(),
-                ChatSample(),
-                ChatSample(),
-                ChatSample(),
-                ChatSample(),
+                const ChatSample(),
+                const ChatSample(),
+                const ChatSample(),
+                const ChatSample(),
+                const ChatSample(),
               ],
             ),
           ),
         ),
       ),
-      bottomSheet: ChatBottomBar(),
+      bottomSheet: const ChatBottomBar(),
     );
 
 
